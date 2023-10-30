@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Troca de Usuário</title>
+</head>
+<body>
+  <h1>Troca de Usuário</h1>
+  <label for="usuarioSelecionado">Selecione um usuário:</label>
+  <select id="usuarioSelecionado">
+    <option value="0">Usuário 1</option>
+    <option value="1">Usuário 2</option>
+    <option value="2">Usuário 3</option>
+    <option value="3">Usuário 4</option>
+    <option value="4">Usuário 5</option>
+  </select>
+
+  <button id="trocaUsuario">Troca de Usuário</button>
+
+  <div>
+    <h2>Informações do Usuário</h2>
+    <p>Nome: <span id="nomeUsuario"></span></p>
+    <p>Data de Nascimento: <span id="dataNascimento"></span></p>
+    <p>Telefone: <span id="telefoneUsuario"></span></p>
+    <p>Carro: <span id="carroUsuario"></span></p>
+  </div>
+
+  <script>
+    document.getElementById("trocaUsuario").addEventListener("click", function () {
+      var selectedIndex = document.getElementById("usuarioSelecionado").value;
+
+      // Carregando dados do arquivo JSON
+      fetch('dados.json')
+        .then(response => response.json())
+        .then(data => {
+          var usuario = data.usuarios[selectedIndex];
+          document.getElementById("nomeUsuario").textContent = usuario.nome;
+          document.getElementById("dataNascimento").textContent = usuario.data_nascimento;
+          document.getElementById("telefoneUsuario").textContent = usuario.telefone;
+          document.getElementById("carroUsuario").textContent = usuario.carro;
+        })
+        .catch(error => console.error('Erro ao carregar os dados:', error));
+    });
+  </script>
+</body>
+</html>

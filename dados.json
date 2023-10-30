@@ -1,0 +1,35 @@
+{
+    "usuarios": [
+      {
+        "nome": "Carlos Ferreira",
+        "data_nascimento": "15/01/1990",
+        "telefone": "93456-7890",
+        "carro": "Opala"
+      },
+      {
+        "nome": "Maria Ribeiro",
+        "data_nascimento": "20/05/1985",
+        "telefone": "97654-3210",
+        "carro": "Fusca"
+      },
+      {
+        "nome": "João Oliveira",
+        "data_nascimento": "10/12/1995",
+        "telefone": "55555-5555",
+        "carro": "Fiat Uno"
+      },
+      {
+        "nome": "Joana Silva",
+        "data_nascimento": "25/09/1980",
+        "telefone": "11122-2333",
+        "carro": "Jeep Renegade"
+      },
+      {
+        "nome": "Antônio Gomes",
+        "data_nascimento": "05/03/2000",
+        "telefone": "99988-8777",
+        "carro": "Corolla"
+      }
+    ]
+  }
+  
